@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F676A6919C4B9D700591D89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F676A6819C4B9D700591D89 /* Foundation.framework */; };
+		0F676A6B19C4B9D700591D89 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F676A6A19C4B9D700591D89 /* CoreGraphics.framework */; };
+		0F676A6D19C4B9D700591D89 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F676A6C19C4B9D700591D89 /* UIKit.framework */; };
+		0F676A7319C4B9D700591D89 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0F676A7119C4B9D700591D89 /* InfoPlist.strings */; };
+		0F676A7519C4B9D700591D89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F676A7419C4B9D700591D89 /* main.m */; };
+		0F676A7919C4B9D700591D89 /* MyoRoomAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F676A7819C4B9D700591D89 /* MyoRoomAppDelegate.m */; };
+		0F676A7C19C4B9D700591D89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F676A7A19C4B9D700591D89 /* Main.storyboard */; };
+		0F676A7F19C4B9D700591D89 /* MyoRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F676A7E19C4B9D700591D89 /* MyoRoomViewController.m */; };
+		0F676A8119C4B9D700591D89 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F676A8019C4B9D700591D89 /* Images.xcassets */; };
+		0F676A8819C4B9D700591D89 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F676A8719C4B9D700591D89 /* XCTest.framework */; };
+		0F676A8919C4B9D700591D89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F676A6819C4B9D700591D89 /* Foundation.framework */; };
+		0F676A8A19C4B9D700591D89 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F676A6C19C4B9D700591D89 /* UIKit.framework */; };
+		0F676A9219C4B9D700591D89 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0F676A9019C4B9D700591D89 /* InfoPlist.strings */; };
+		0F676A9419C4B9D700591D89 /* MyoRoomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F676A9319C4B9D700591D89 /* MyoRoomTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0F676A8B19C4B9D700591D89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F676A5D19C4B9D700591D89 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F676A6419C4B9D700591D89;
+			remoteInfo = MyoRoom;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0F676A6519C4B9D700591D89 /* MyoRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyoRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F676A6819C4B9D700591D89 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0F676A6A19C4B9D700591D89 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0F676A6C19C4B9D700591D89 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0F676A7019C4B9D700591D89 /* MyoRoom-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyoRoom-Info.plist"; sourceTree = "<group>"; };
+		0F676A7219C4B9D700591D89 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0F676A7419C4B9D700591D89 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0F676A7619C4B9D700591D89 /* MyoRoom-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyoRoom-Prefix.pch"; sourceTree = "<group>"; };
+		0F676A7719C4B9D700591D89 /* MyoRoomAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyoRoomAppDelegate.h; sourceTree = "<group>"; };
+		0F676A7819C4B9D700591D89 /* MyoRoomAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyoRoomAppDelegate.m; sourceTree = "<group>"; };
+		0F676A7B19C4B9D700591D89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0F676A7D19C4B9D700591D89 /* MyoRoomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyoRoomViewController.h; sourceTree = "<group>"; };
+		0F676A7E19C4B9D700591D89 /* MyoRoomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyoRoomViewController.m; sourceTree = "<group>"; };
+		0F676A8019C4B9D700591D89 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0F676A8619C4B9D700591D89 /* MyoRoomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyoRoomTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F676A8719C4B9D700591D89 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		0F676A8F19C4B9D700591D89 /* MyoRoomTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyoRoomTests-Info.plist"; sourceTree = "<group>"; };
+		0F676A9119C4B9D700591D89 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0F676A9319C4B9D700591D89 /* MyoRoomTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyoRoomTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0F676A6219C4B9D700591D89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F676A6B19C4B9D700591D89 /* CoreGraphics.framework in Frameworks */,
+				0F676A6D19C4B9D700591D89 /* UIKit.framework in Frameworks */,
+				0F676A6919C4B9D700591D89 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F676A8319C4B9D700591D89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F676A8819C4B9D700591D89 /* XCTest.framework in Frameworks */,
+				0F676A8A19C4B9D700591D89 /* UIKit.framework in Frameworks */,
+				0F676A8919C4B9D700591D89 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F676A5C19C4B9D700591D89 = {
+			isa = PBXGroup;
+			children = (
+				0F676A6E19C4B9D700591D89 /* MyoRoom */,
+				0F676A8D19C4B9D700591D89 /* MyoRoomTests */,
+				0F676A6719C4B9D700591D89 /* Frameworks */,
+				0F676A6619C4B9D700591D89 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0F676A6619C4B9D700591D89 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0F676A6519C4B9D700591D89 /* MyoRoom.app */,
+				0F676A8619C4B9D700591D89 /* MyoRoomTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0F676A6719C4B9D700591D89 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F676A6819C4B9D700591D89 /* Foundation.framework */,
+				0F676A6A19C4B9D700591D89 /* CoreGraphics.framework */,
+				0F676A6C19C4B9D700591D89 /* UIKit.framework */,
+				0F676A8719C4B9D700591D89 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0F676A6E19C4B9D700591D89 /* MyoRoom */ = {
+			isa = PBXGroup;
+			children = (
+				0F676A7719C4B9D700591D89 /* MyoRoomAppDelegate.h */,
+				0F676A7819C4B9D700591D89 /* MyoRoomAppDelegate.m */,
+				0F676A7A19C4B9D700591D89 /* Main.storyboard */,
+				0F676A7D19C4B9D700591D89 /* MyoRoomViewController.h */,
+				0F676A7E19C4B9D700591D89 /* MyoRoomViewController.m */,
+				0F676A8019C4B9D700591D89 /* Images.xcassets */,
+				0F676A6F19C4B9D700591D89 /* Supporting Files */,
+			);
+			path = MyoRoom;
+			sourceTree = "<group>";
+		};
+		0F676A6F19C4B9D700591D89 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0F676A7019C4B9D700591D89 /* MyoRoom-Info.plist */,
+				0F676A7119C4B9D700591D89 /* InfoPlist.strings */,
+				0F676A7419C4B9D700591D89 /* main.m */,
+				0F676A7619C4B9D700591D89 /* MyoRoom-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0F676A8D19C4B9D700591D89 /* MyoRoomTests */ = {
+			isa = PBXGroup;
+			children = (
+				0F676A9319C4B9D700591D89 /* MyoRoomTests.m */,
+				0F676A8E19C4B9D700591D89 /* Supporting Files */,
+			);
+			path = MyoRoomTests;
+			sourceTree = "<group>";
+		};
+		0F676A8E19C4B9D700591D89 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0F676A8F19C4B9D700591D89 /* MyoRoomTests-Info.plist */,
+				0F676A9019C4B9D700591D89 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0F676A6419C4B9D700591D89 /* MyoRoom */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F676A9719C4B9D700591D89 /* Build configuration list for PBXNativeTarget "MyoRoom" */;
+			buildPhases = (
+				0F676A6119C4B9D700591D89 /* Sources */,
+				0F676A6219C4B9D700591D89 /* Frameworks */,
+				0F676A6319C4B9D700591D89 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyoRoom;
+			productName = MyoRoom;
+			productReference = 0F676A6519C4B9D700591D89 /* MyoRoom.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0F676A8519C4B9D700591D89 /* MyoRoomTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F676A9A19C4B9D700591D89 /* Build configuration list for PBXNativeTarget "MyoRoomTests" */;
+			buildPhases = (
+				0F676A8219C4B9D700591D89 /* Sources */,
+				0F676A8319C4B9D700591D89 /* Frameworks */,
+				0F676A8419C4B9D700591D89 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0F676A8C19C4B9D700591D89 /* PBXTargetDependency */,
+			);
+			name = MyoRoomTests;
+			productName = MyoRoomTests;
+			productReference = 0F676A8619C4B9D700591D89 /* MyoRoomTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0F676A5D19C4B9D700591D89 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MyoRoom;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Yuxuan Chen";
+				TargetAttributes = {
+					0F676A8519C4B9D700591D89 = {
+						TestTargetID = 0F676A6419C4B9D700591D89;
+					};
+				};
+			};
+			buildConfigurationList = 0F676A6019C4B9D700591D89 /* Build configuration list for PBXProject "MyoRoom" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0F676A5C19C4B9D700591D89;
+			productRefGroup = 0F676A6619C4B9D700591D89 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0F676A6419C4B9D700591D89 /* MyoRoom */,
+				0F676A8519C4B9D700591D89 /* MyoRoomTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0F676A6319C4B9D700591D89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F676A8119C4B9D700591D89 /* Images.xcassets in Resources */,
+				0F676A7319C4B9D700591D89 /* InfoPlist.strings in Resources */,
+				0F676A7C19C4B9D700591D89 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F676A8419C4B9D700591D89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F676A9219C4B9D700591D89 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0F676A6119C4B9D700591D89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F676A7519C4B9D700591D89 /* main.m in Sources */,
+				0F676A7919C4B9D700591D89 /* MyoRoomAppDelegate.m in Sources */,
+				0F676A7F19C4B9D700591D89 /* MyoRoomViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F676A8219C4B9D700591D89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F676A9419C4B9D700591D89 /* MyoRoomTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0F676A8C19C4B9D700591D89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0F676A6419C4B9D700591D89 /* MyoRoom */;
+			targetProxy = 0F676A8B19C4B9D700591D89 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0F676A7119C4B9D700591D89 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0F676A7219C4B9D700591D89 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0F676A7A19C4B9D700591D89 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0F676A7B19C4B9D700591D89 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0F676A9019C4B9D700591D89 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0F676A9119C4B9D700591D89 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0F676A9519C4B9D700591D89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0F676A9619C4B9D700591D89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0F676A9819C4B9D700591D89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyoRoom/MyoRoom-Prefix.pch";
+				INFOPLIST_FILE = "MyoRoom/MyoRoom-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0F676A9919C4B9D700591D89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyoRoom/MyoRoom-Prefix.pch";
+				INFOPLIST_FILE = "MyoRoom/MyoRoom-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		0F676A9B19C4B9D700591D89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MyoRoom.app/MyoRoom";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyoRoom/MyoRoom-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MyoRoomTests/MyoRoomTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		0F676A9C19C4B9D700591D89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MyoRoom.app/MyoRoom";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyoRoom/MyoRoom-Prefix.pch";
+				INFOPLIST_FILE = "MyoRoomTests/MyoRoomTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0F676A6019C4B9D700591D89 /* Build configuration list for PBXProject "MyoRoom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F676A9519C4B9D700591D89 /* Debug */,
+				0F676A9619C4B9D700591D89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0F676A9719C4B9D700591D89 /* Build configuration list for PBXNativeTarget "MyoRoom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F676A9819C4B9D700591D89 /* Debug */,
+				0F676A9919C4B9D700591D89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0F676A9A19C4B9D700591D89 /* Build configuration list for PBXNativeTarget "MyoRoomTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F676A9B19C4B9D700591D89 /* Debug */,
+				0F676A9C19C4B9D700591D89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0F676A5D19C4B9D700591D89 /* Project object */;
+}
