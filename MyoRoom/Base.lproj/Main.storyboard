@@ -57,15 +57,6 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="klO-RJ-6zv">
-                                <rect key="frame" x="139" y="172" width="141" height="30"/>
-                                <state key="normal" title="Click to pair">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="didClickToPairMyo:" destination="WST-pT-GZc" eventType="touchUpInside" id="f7V-as-FRa"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jambox" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uly-Xg-rlU">
                                 <rect key="frame" x="43" y="273" width="64" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -90,11 +81,33 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="None" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayv-Xk-aBa">
+                                <rect key="frame" x="0.0" y="131" width="320" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gesture detected:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYH-aa-w37">
+                                <rect key="frame" x="89" y="102" width="143" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="klO-RJ-6zv">
+                                <rect key="frame" x="139" y="172" width="141" height="30"/>
+                                <state key="normal" title="Click to pair">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didClickToPairMyo:" destination="WST-pT-GZc" eventType="touchUpInside" id="f7V-as-FRa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="MyoRoom" id="zEk-TF-0Lh"/>
                     <connections>
+                        <outlet property="gestureTitleLabel" destination="bYH-aa-w37" id="ma7-gt-o3j"/>
                         <outlet property="jamboxIsConnected" destination="maS-TS-xdT" id="q3e-4S-aG9"/>
                         <outlet property="jamboxLabel" destination="uly-Xg-rlU" id="Oxs-op-u9Z"/>
                         <outlet property="jamboxSetDirButton" destination="Gm8-gp-mq9" id="A6E-FM-Irl"/>
@@ -103,6 +116,7 @@
                         <outlet property="lightSetDirButton" destination="Xq9-0S-Ft0" id="GJQ-n7-FsG"/>
                         <outlet property="myoIsConnected" destination="fvi-lp-SLS" id="utD-75-zKk"/>
                         <outlet property="myoPairButton" destination="klO-RJ-6zv" id="GAI-UT-0YM"/>
+                        <outlet property="testLabel" destination="ayv-Xk-aBa" id="XnL-vX-nVq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YXi-7t-8n6" userLabel="First Responder" sceneMemberID="firstResponder"/>
