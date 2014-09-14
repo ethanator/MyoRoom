@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F6534E019C4FC8700DFA2B7 /* MyoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6534DF19C4FC8700DFA2B7 /* MyoKit.framework */; };
+		0F6534E219C4FCEA00DFA2B7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6534E119C4FCEA00DFA2B7 /* SystemConfiguration.framework */; };
 		0F676A6919C4B9D700591D89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F676A6819C4B9D700591D89 /* Foundation.framework */; };
 		0F676A6B19C4B9D700591D89 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F676A6A19C4B9D700591D89 /* CoreGraphics.framework */; };
 		0F676A6D19C4B9D700591D89 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F676A6C19C4B9D700591D89 /* UIKit.framework */; };
@@ -34,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F6534DE19C4F9E500DFA2B7 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = ../Constants.h; sourceTree = "<group>"; };
+		0F6534DF19C4FC8700DFA2B7 /* MyoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MyoKit.framework; sourceTree = "<group>"; };
+		0F6534E119C4FCEA00DFA2B7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0F676A6519C4B9D700591D89 /* MyoRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyoRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F676A6819C4B9D700591D89 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0F676A6A19C4B9D700591D89 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -60,7 +65,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F6534E219C4FCEA00DFA2B7 /* SystemConfiguration.framework in Frameworks */,
 				0F676A6B19C4B9D700591D89 /* CoreGraphics.framework in Frameworks */,
+				0F6534E019C4FC8700DFA2B7 /* MyoKit.framework in Frameworks */,
 				0F676A6D19C4B9D700591D89 /* UIKit.framework in Frameworks */,
 				0F676A6919C4B9D700591D89 /* Foundation.framework in Frameworks */,
 			);
@@ -101,6 +108,8 @@
 		0F676A6719C4B9D700591D89 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0F6534E119C4FCEA00DFA2B7 /* SystemConfiguration.framework */,
+				0F6534DF19C4FC8700DFA2B7 /* MyoKit.framework */,
 				0F676A6819C4B9D700591D89 /* Foundation.framework */,
 				0F676A6A19C4B9D700591D89 /* CoreGraphics.framework */,
 				0F676A6C19C4B9D700591D89 /* UIKit.framework */,
@@ -126,6 +135,7 @@
 		0F676A6F19C4B9D700591D89 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0F6534DE19C4F9E500DFA2B7 /* Constants.h */,
 				0F676A7019C4B9D700591D89 /* MyoRoom-Info.plist */,
 				0F676A7119C4B9D700591D89 /* InfoPlist.strings */,
 				0F676A7419C4B9D700591D89 /* main.m */,
@@ -377,6 +387,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyoRoom/MyoRoom-Prefix.pch";
 				INFOPLIST_FILE = "MyoRoom/MyoRoom-Info.plist";
@@ -390,6 +404,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyoRoom/MyoRoom-Prefix.pch";
 				INFOPLIST_FILE = "MyoRoom/MyoRoom-Info.plist";
@@ -457,6 +475,7 @@
 				0F676A9919C4B9D700591D89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0F676A9A19C4B9D700591D89 /* Build configuration list for PBXNativeTarget "MyoRoomTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +484,7 @@
 				0F676A9C19C4B9D700591D89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

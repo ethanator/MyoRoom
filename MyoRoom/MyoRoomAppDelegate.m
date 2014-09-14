@@ -7,12 +7,20 @@
 //
 
 #import "MyoRoomAppDelegate.h"
+#import <MyoKit/MyoKit.h>
+#import "Constants.h"
 
 @implementation MyoRoomAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    // Instantiate the hub using the singleton accessor, and set the applicationIdentifier of the project.
+    [[TLMHub sharedHub] setApplicationIdentifier:@APPLICATION_ID];
+    // Call attachToAdjacent to begin looking for Myos to pair with.
+    [[TLMHub sharedHub] attachToAdjacent];
+    
     return YES;
 }
 							
