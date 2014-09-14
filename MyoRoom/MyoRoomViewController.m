@@ -10,6 +10,7 @@
 #import "MyoRoomViewController.h"
 #import <MyoKit/MyoKit.h>
 #import "BOXDevice.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface MyoRoomViewController () <BOXDeviceDelegate>
 
@@ -128,11 +129,11 @@
     self.testLabel.hidden = NO;
     
     // Show the status of the jambox
-    if (self.jambox != NULL) {
+    
         self.jamboxIsConnected.text = @STATUS_CONNECTED;
         self.jamboxIsConnected.textColor = [UIColor greenColor];
         self.jamboxSetDirButton.hidden = NO;
-    }
+    
 }
 
 - (void)didDisconnectDevice:(NSNotification *)notification {
@@ -162,6 +163,8 @@
     
     if (fabs(self.jamboxYaw - self.currentAngle.yaw.radians) < 0.1) {
             NSLog(@"Pointing at the jambox");
+        float nextVol = [MPMusicPlayerController applicationMusicPlayer].volume + 1.0/16;
+        [[MPMusicPlayerController applicationMusicPlayer] setVolume: nextVol > 1.0 ? 1.0 : nextVol];
         }
     
     NSLog(@"Not pointing");
