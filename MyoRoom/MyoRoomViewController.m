@@ -9,8 +9,9 @@
 #import "Constants.h"
 #import "MyoRoomViewController.h"
 #import <MyoKit/MyoKit.h>
+#import "BOXDevice.h"
 
-@interface MyoRoomViewController ()
+@interface MyoRoomViewController () <BOXDeviceDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *myoIsConnected;
 @property (weak, nonatomic) IBOutlet UILabel *jamboxIsConnected;
@@ -24,6 +25,15 @@
 @property (strong, nonatomic) TLMPose *currentPose;
 @property (weak, nonatomic) IBOutlet UILabel *gestureTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *testLabel;
+@property (nonatomic, strong) UIAlertView *authAlert;
+@property (nonatomic, strong) BOXDevice *jambox;
+@property (nonatomic, strong) TLMEulerAngles *currentAngle;
+@property (nonatomic, strong) NSMutableArray *devices;
+- (IBAction)setJamboxDirection:(id)sender;
+
+@property double jamboxYaw;
+@property double jamboxPitch;
+@property double jamboxRoll;
 
 @end
 
@@ -66,13 +76,31 @@
                                              selector:@selector(didReceiveOrientationEvent:)
                                                  name:TLMMyoDidReceiveOrientationEventNotification
                                                object:nil];
+    
     // Posted when a new pose is available from a TLMMyo
-    /*
+    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(didReceivePoseChange:)
                                                  name:TLMMyoDidReceivePoseChangedNotification
                                                object:nil];
-     */
+     
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+        __weak typeof(self) wself = self;
+        if (wself.jambox != NULL) return;
+        [BOXDevice findDevices:^(BOXDevice *device, BOOL *stop, NSError *error) {
+            NSLog(@"%@", device.name);
+            if ([device.name isEqualToString:@"v1.3"]) {
+                wself.jambox = device;
+                [wself.view setNeedsDisplay];
+            }
+            *stop = YES;
+        }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -98,6 +126,13 @@
     
     self.gestureTitleLabel.hidden = NO;
     self.testLabel.hidden = NO;
+    
+    // Show the status of the jambox
+    if (self.jambox != NULL) {
+        self.jamboxIsConnected.text = @STATUS_CONNECTED;
+        self.jamboxIsConnected.textColor = [UIColor greenColor];
+        self.jamboxSetDirButton.hidden = NO;
+    }
 }
 
 - (void)didDisconnectDevice:(NSNotification *)notification {
@@ -121,10 +156,18 @@
     TLMOrientationEvent *orientationEvent = notification.userInfo[kTLMKeyOrientationEvent];
     
     // Create Euler angles from the quaternion of the orientation.
-    TLMEulerAngles *angles = [TLMEulerAngles anglesWithQuaternion:orientationEvent.quaternion];
+    self.currentAngle = [TLMEulerAngles anglesWithQuaternion:orientationEvent.quaternion];
     
-    self.testLabel.text = [NSString stringWithFormat:@"Yaw:%3.4lf Pitch:%3.4lf Roll:%3.4lf",
-        angles.yaw.radians, angles.pitch.radians, angles.roll.radians];
+    if (!self.jamboxYaw) return;
+    
+    if (fabs(self.jamboxYaw - self.currentAngle.yaw.radians) < 0.1) {
+            NSLog(@"Pointing at the jambox");
+        }
+    
+    NSLog(@"Not pointing");
+    
+    //self.testLabel.text = [NSString stringWithFormat:@"Yaw:%3.4lf Pitch:%3.4lf Roll:%3.4lf",
+      //  angles.yaw.radians, angles.pitch.radians, angles.roll.radians];
 }
 
 - (void)didReceivePoseChange:(NSNotification *)notification {
@@ -137,33 +180,33 @@
         case TLMPoseTypeUnknown:
         case TLMPoseTypeRest:
             // Changes helloLabel's font to Helvetica Neue when the user is in a rest or unknown pose.
-            self.testLabel.text = @"None";
-            self.testLabel.font = [UIFont fontWithName:@"Helvetica Neue" size:15];
+            //self.testLabel.text = @"None";
+            //self.testLabel.font = [UIFont fontWithName:@"Helvetica Neue" size:15];
             break;
         case TLMPoseTypeFist:
             // Changes helloLabel's font to Noteworthy when the user is in a fist pose.
-            self.testLabel.text = @"Fist";
-            self.testLabel.font = [UIFont fontWithName:@"Helvetica Neue" size:15];
+            //self.testLabel.text = @"Fist";
+            //self.testLabel.font = [UIFont fontWithName:@"Helvetica Neue" size:15];
             break;
         case TLMPoseTypeWaveIn:
             // Changes helloLabel's font to Courier New when the user is in a wave in pose.
-            self.testLabel.text = @"Wave In";
-            self.testLabel.font = [UIFont fontWithName:@"Helvetica Neue" size:15];
+            //self.testLabel.text = @"Wave In";
+            //self.testLabel.font = [UIFont fontWithName:@"Helvetica Neue" size:15];
             break;
         case TLMPoseTypeWaveOut:
             // Changes helloLabel's font to Snell Roundhand when the user is in a wave out pose.
-            self.testLabel.text = @"Wave Out";
-            self.testLabel.font = [UIFont fontWithName:@"Helvetica Neue" size:15];
+            //self.testLabel.text = @"Wave Out";
+            //self.testLabel.font = [UIFont fontWithName:@"Helvetica Neue" size:15];
             break;
         case TLMPoseTypeFingersSpread:
             // Changes helloLabel's font to Chalkduster when the user is in a fingers spread pose.
-            self.testLabel.text = @"Fingers Spread";
-            self.testLabel.font = [UIFont fontWithName:@"Helvetica Neue" size:15];
+            //self.testLabel.text = @"Fingers Spread";
+            //self.testLabel.font = [UIFont fontWithName:@"Helvetica Neue" size:15];
             break;
         case TLMPoseTypeThumbToPinky:
             // Changes helloLabel's font to Superclarendon when the user is in a twist in pose.
-            self.testLabel.text = @"Thumb to Pinky";
-            self.testLabel.font = [UIFont fontWithName:@"Helvetica Neue" size:15];
+            //self.testLabel.text = @"Thumb to Pinky";
+            //self.testLabel.font = [UIFont fontWithName:@"Helvetica Neue" size:15];
             break;
     }
 }
@@ -175,5 +218,50 @@
     [controller.navigationBar setBackgroundColor:UIColorFromRGB(ORANGE_YELLOW)];
     // Present the settings view controller modally.
     [self presentViewController:controller animated:YES completion:nil];
+}
+
+#pragma mark BOXDeviceDelegate
+
+- (void)boxDeviceRequiresAuthentication:(BOXDevice *)device
+{
+    self.authAlert =
+    [[UIAlertView alloc] initWithTitle:nil
+                               message:@"Please press the round button to authenticate"
+                              delegate:nil
+                     cancelButtonTitle:nil
+                     otherButtonTitles:nil];
+    [self.authAlert show];
+}
+
+- (void)boxDevice:(BOXDevice *)device didDisconnectWithError:(NSError *)error
+{
+    if (error) {
+        [[[UIAlertView alloc] initWithTitle:@"Disconnected"
+                                    message:[NSString stringWithFormat:@"Disconnected from %@ ", device.name]
+                                   delegate:nil
+                          cancelButtonTitle:@"OK"
+                          otherButtonTitles:nil] show];
+    }
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
+#pragma mark Private
+
+- (void)pulseButton:(UIButton *)button
+{
+    button.highlighted = YES;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        button.highlighted = NO;
+    });
+}
+
+- (IBAction)setJamboxDirection:(id)sender {
+    self.jamboxYaw = self.currentAngle.yaw.radians;
+    self.jamboxPitch = self.currentAngle.pitch.radians;
+    self.jamboxRoll = self.currentAngle.roll.radians;
+    NSLog(@"Y: %4.4lf; P: %4.4lf; R: %4.4lf", self.jamboxYaw, self.jamboxPitch, self.jamboxRoll);
+    self.jamboxSetDirButton.titleLabel.text = @"Reset";
 }
 @end

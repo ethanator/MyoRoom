@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0F6534E019C4FC8700DFA2B7 /* MyoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6534DF19C4FC8700DFA2B7 /* MyoKit.framework */; };
 		0F6534E219C4FCEA00DFA2B7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6534E119C4FCEA00DFA2B7 /* SystemConfiguration.framework */; };
+		0F6534EC19C55CAE00DFA2B7 /* libBoxKitBeta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6534E419C554FC00DFA2B7 /* libBoxKitBeta.a */; };
+		0F6534EE19C564FA00DFA2B7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6534ED19C564FA00DFA2B7 /* AVFoundation.framework */; };
 		0F676A6919C4B9D700591D89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F676A6819C4B9D700591D89 /* Foundation.framework */; };
 		0F676A6B19C4B9D700591D89 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F676A6A19C4B9D700591D89 /* CoreGraphics.framework */; };
 		0F676A6D19C4B9D700591D89 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F676A6C19C4B9D700591D89 /* UIKit.framework */; };
@@ -39,6 +41,10 @@
 		0F6534DE19C4F9E500DFA2B7 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = ../Constants.h; sourceTree = "<group>"; };
 		0F6534DF19C4FC8700DFA2B7 /* MyoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MyoKit.framework; sourceTree = "<group>"; };
 		0F6534E119C4FCEA00DFA2B7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0F6534E319C554FC00DFA2B7 /* BOXDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOXDevice.h; sourceTree = "<group>"; };
+		0F6534E419C554FC00DFA2B7 /* libBoxKitBeta.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBoxKitBeta.a; sourceTree = "<group>"; };
+		0F6534EA19C55A5800DFA2B7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		0F6534ED19C564FA00DFA2B7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0F676A6519C4B9D700591D89 /* MyoRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyoRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F676A6819C4B9D700591D89 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0F676A6A19C4B9D700591D89 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -65,6 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F6534EE19C564FA00DFA2B7 /* AVFoundation.framework in Frameworks */,
+				0F6534EC19C55CAE00DFA2B7 /* libBoxKitBeta.a in Frameworks */,
 				0F6534E219C4FCEA00DFA2B7 /* SystemConfiguration.framework in Frameworks */,
 				0F676A6B19C4B9D700591D89 /* CoreGraphics.framework in Frameworks */,
 				0F6534E019C4FC8700DFA2B7 /* MyoKit.framework in Frameworks */,
@@ -86,9 +94,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F6534E619C5550200DFA2B7 /* BoxKitBeta */ = {
+			isa = PBXGroup;
+			children = (
+				0F6534E319C554FC00DFA2B7 /* BOXDevice.h */,
+				0F6534E419C554FC00DFA2B7 /* libBoxKitBeta.a */,
+			);
+			name = BoxKitBeta;
+			sourceTree = "<group>";
+		};
 		0F676A5C19C4B9D700591D89 = {
 			isa = PBXGroup;
 			children = (
+				0F6534E619C5550200DFA2B7 /* BoxKitBeta */,
 				0F676A6E19C4B9D700591D89 /* MyoRoom */,
 				0F676A8D19C4B9D700591D89 /* MyoRoomTests */,
 				0F676A6719C4B9D700591D89 /* Frameworks */,
@@ -108,6 +126,8 @@
 		0F676A6719C4B9D700591D89 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0F6534ED19C564FA00DFA2B7 /* AVFoundation.framework */,
+				0F6534EA19C55A5800DFA2B7 /* AudioToolbox.framework */,
 				0F6534E119C4FCEA00DFA2B7 /* SystemConfiguration.framework */,
 				0F6534DF19C4FC8700DFA2B7 /* MyoKit.framework */,
 				0F676A6819C4B9D700591D89 /* Foundation.framework */,
@@ -385,6 +405,7 @@
 		0F676A9819C4B9D700591D89 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = armv7;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -394,7 +415,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyoRoom/MyoRoom-Prefix.pch";
 				INFOPLIST_FILE = "MyoRoom/MyoRoom-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -402,6 +429,7 @@
 		0F676A9919C4B9D700591D89 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = armv7;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -411,7 +439,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyoRoom/MyoRoom-Prefix.pch";
 				INFOPLIST_FILE = "MyoRoom/MyoRoom-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

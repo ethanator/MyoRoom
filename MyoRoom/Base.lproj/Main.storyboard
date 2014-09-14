@@ -68,6 +68,9 @@
                                 <state key="normal" title="Click to set direction">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="setJamboxDirection:" destination="WST-pT-GZc" eventType="touchUpInside" id="hPU-Ja-PEf"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Light" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8g-4K-AOO">
                                 <rect key="frame" x="43" y="369" width="40" height="21"/>
@@ -110,7 +113,7 @@
                         <outlet property="gestureTitleLabel" destination="bYH-aa-w37" id="ma7-gt-o3j"/>
                         <outlet property="jamboxIsConnected" destination="maS-TS-xdT" id="q3e-4S-aG9"/>
                         <outlet property="jamboxLabel" destination="uly-Xg-rlU" id="Oxs-op-u9Z"/>
-                        <outlet property="jamboxSetDirButton" destination="Gm8-gp-mq9" id="A6E-FM-Irl"/>
+                        <outlet property="jamboxSetDirButton" destination="Gm8-gp-mq9" id="Ym4-fs-5jR"/>
                         <outlet property="lightIsConnected" destination="vmh-vw-lAO" id="txW-0F-ryt"/>
                         <outlet property="lightLabel" destination="K8g-4K-AOO" id="7xW-lo-Wc7"/>
                         <outlet property="lightSetDirButton" destination="Xq9-0S-Ft0" id="GJQ-n7-FsG"/>

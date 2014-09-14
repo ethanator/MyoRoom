@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class BOXDevice;
+
 @interface MyoRoomViewController : UIViewController
+
+@property (nonatomic, strong) BOXDevice *device;
 
 @end
